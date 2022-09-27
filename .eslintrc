@@ -1,0 +1,9 @@
+{
+  "extends": ["@charrue/typescript"],
+  "rules": {
+    "no-magic-numbers": "off",
+    "no-param-reassign": "off",
+    "no-shadow": "off",
+    "import/no-unresolved": "off"
+  }
+}

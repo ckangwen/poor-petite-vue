@@ -1,0 +1,52 @@
+{
+  "name": "poor-petite-vue",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "homepage": "",
+  "bugs": "",
+  "repository": {
+    "type": "git",
+    "url": "git+"
+  },
+  "license": "MIT",
+  "author": "",
+  "sideEffects": false,
+  "type": "module",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "lint": "eslint src/**/*.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "*.ts": "npm run lint"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@charrue/eslint-config-typescript": "^0.2.0",
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@types/node": "^18.7.5",
+    "@vue/reactivity": "^3.2.39",
+    "@vue/shared": "^3.2.39",
+    "commitizen": "^4.2.4",
+    "conventional-changelog": "^3.1.25",
+    "conventional-changelog-cli": "^2.2.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.3.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "typescript": "^4.8.3",
+    "vite": "^3.0.7",
+    "vitest": "^0.22.0"
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="module">
+    import { createApp, reactive, computed } from "./src/index.ts";
+
+    createApp({
+      setup() {
+        const state = reactive({
+          count: 0
+        })
+
+        const computedCount = computed(() => {
+          return `[Next]${state.count + 1 }`
+        })
+
+        const onIncrease = () => {
+          state.count += 1;
+        }
+
+        return {
+          state,
+          computedCount,
+          onIncrease
+        }
+      }
+    }).mount("#app")
+  </script>
+
+  <div id="app">
+    <p>{{ state.count }}</p>
+    <p>computed data: {{ computedCount }}</p>
+    <button @click="onIncrease">increase</button>
+  </div>
+</body>
+
+</html>
