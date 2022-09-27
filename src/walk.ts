@@ -1,12 +1,13 @@
-/* eslint-disable max-statements */
-/* eslint-disable no-console */
-/* eslint-disable @typescript-eslint/no-use-before-define */
-import type { Context } from "./context";
 import {
-  delimitersRE, toDisplayString, evaluate, directiveRE, listen,
+  delimitersRE,
+  toDisplayString,
+  evaluate,
+  directiveRE,
+  listen,
 } from "./utils";
+import type { Context } from "./context";
 
-export enum NodeType {
+enum NodeType {
   Element = 1,
   Text = 3,
 }
@@ -26,6 +27,7 @@ export const walk = (node: Node, ctx: Context) => {
       }
     });
 
+    // eslint-disable-next-line @typescript-eslint/no-use-before-define
     walkChildren(node as Element, ctx);
   }
 

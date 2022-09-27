@@ -1,8 +1,8 @@
 import { proxyRefs, effect as rawEffect } from "@vue/reactivity";
 import { hasOwn } from "@vue/shared";
 import { toDisplayString } from "./utils";
-import type { ReactiveEffectRunner } from "@vue/reactivity";
 import { queueJob } from "./scheduler";
+import type { ReactiveEffectRunner } from "@vue/reactivity";
 
 export interface Context {
   $s: (value: any) => string

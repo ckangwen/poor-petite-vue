@@ -19,6 +19,7 @@ export const toDisplayString = (value: any) => {
 };
 
 export const delimitersRE = /\{\{([^]+?)\}\}/g;
+
 export const directiveRE = /^(?:v-|:|@)/;
 
 // eslint-disable-next-line no-new-func
